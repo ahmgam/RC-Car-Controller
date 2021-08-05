@@ -53,7 +53,7 @@ static void MotorStop()
 }
 static void SetSpeed(float speed)
 {
-	//PWM_SetDutyCycle(speed);
+	PWM_SetDutyCycle(speed);
 }
 //Car control functions
 	

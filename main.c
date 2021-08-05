@@ -10,17 +10,16 @@ void test_PWM(void);
 
 int main(void) 
 {
-//Initialize pclock properly to 72Mhz
-	//SetSysClockTo72();
-	test_ADC();
+
+	//test_ADC();
 	//test_PWM();
 	//test_gpio();
 	//test_uart(9600);
 	
 	//main program
-	//RC_Car_Init();
-	//StartRCCar();
-	while(1);
+	RC_Car_Init();
+	StartRCCar();
+	
 }
 void test_ADC()
 {
