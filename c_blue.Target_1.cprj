@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<cprj schemaVersion="0.0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CPRJ.xsd">
+
+  <created timestamp="2021-08-05T16:33:01" tool="uVision V5.34.0.0"/>
+
+  <info>
+    <name>c blue</name>
+    <description/>
+  </info>
+
+  <packages>
+    <package name="CMSIS" vendor="ARM"/>
+    <package name="STM32F1xx_DFP" vendor="Keil"/>
+  </packages>
+
+  <compilers>
+    <compiler name="AC6" version="6.0.0:6.99.99"/>
+  </compilers>
+
+  <target Ddsp="NO_DSP" Dendian="Little-endian" Dfpu="NO_FPU" Dmve="NO_MVE" Dname="STM32F103C6" Dsecure="Non-secure" Dtz="NO_TZ" Dvendor="STMicroelectronics:13">
+    <output intdir="./Objects/" name="c blue" outdir="./Objects/" type="exe"/>
+    <ldflags add="--callgraph --entry 0x08000000 --entry Reset_Handler --first __Vectors --info sizes --info summarysizes --info totals --info unused --info veneers --load_addr_map_info --map --ro-base 0x08000000 --rw-base 0x20000000 --strict --summary_stderr --symbols --xref" compiler="AC6"/>
+    <cflags add="-D__EVAL -O1 -Weverything -Wno-documentation -Wno-documentation-unknown-command -Wno-license-management -Wno-packed -Wno-parentheses-equality  -Wno-reserved-id-macro -Wno-unused-macros -ffunction-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char -gdwarf-3 -std=c99 -xc" compiler="AC6"/>
+    <asflags add="-Wa,armasm,--pd,&quot;__EVAL SETA 1&quot; -gdwarf-3 -masm=auto" compiler="AC6"/>
+  </target>
+
+  <components>
+    <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM"/>
+    <component Cclass="CMSIS" Cgroup="DSP" Cvariant="Source" Cvendor="ARM"/>
+    <component Cclass="Device" Cgroup="GPIO" Cvendor="Keil"/>
+    <component Cclass="Device" Cgroup="Startup" Cvendor="Keil">
+      <file attr="config" category="source" name="Device/Source/ARM/startup_stm32f10x_ld.s" version="1.0.0"/>
+      <file attr="config" category="source" name="Device/Source/system_stm32f10x.c" version="1.0.0"/>
+      <file attr="config" category="header" name="RTE_Driver/Config/RTE_Device.h" version="1.1.2"/>
+    </component>
+    <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="ADC" Cvendor="Keil"/>
+    <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="Flash" Cvendor="Keil"/>
+    <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="Framework" Cvendor="Keil">
+      <file attr="config" category="source" name="Device/StdPeriph_Driver/templates/stm32f10x_conf.h" version="3.5.0"/>
+    </component>
+    <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="GPIO" Cvendor="Keil"/>
+    <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="RCC" Cvendor="Keil"/>
+    <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="TIM" Cvendor="Keil"/>
+    <component Cclass="Device" Cgroup="StdPeriph Drivers" Csub="USART" Cvendor="Keil"/>
+  </components>
+
+  <files>
+    <group name="Source Group 1">
+      <file category="sourceC" name="./main.c"/>
+      <file category="sourceC" name="./uart.c"/>
+      <file category="header" name="./uart.h"/>
+      <file category="sourceC" name="./pwm.c"/>
+      <file category="header" name="./pwm.h"/>
+      <file category="sourceC" name="./adc.c"/>
+      <file category="header" name="./adc.h"/>
+      <file category="sourceC" name="./motors.c"/>
+      <file category="header" name="./motors.h"/>
+      <file category="sourceC" name="./rc_car.c"/>
+      <file category="header" name="./rc_car.h"/>
+    </group>
+  </files>
+
+</cprj>
