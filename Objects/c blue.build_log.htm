@@ -22,35 +22,111 @@ Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
 D:\Ahmed\Github\RC-Car-Controller\c blue.uvprojx
-Project File Date:  08/01/2021
+Project File Date:  08/05/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'D:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
-main.c(4): warning: In file included from...
+main.c(2): warning: In file included from...
 ./rc_car.h(7): warning: In file included from...
 ./motors.h(33): warning: no newline at end of file [-Wnewline-eof]
 #endif
       ^
-main.c(4): warning: In file included from...
-./rc_car.h(21): warning: no newline at end of file [-Wnewline-eof]
+main.c(2): warning: In file included from...
+./rc_car.h(8): warning: In file included from...
+./tests.h(4): warning: In file included from...
+./rc_car.h(22): warning: no newline at end of file [-Wnewline-eof]
 #endif
       ^
-main.c(25): warning: function 'test_ADC' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+main.c(2): warning: In file included from...
+./rc_car.h(22): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+main.c(9): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+4 warnings generated.
+compiling main.c...
+tests.c(1): warning: In file included from...
+./tests.h(4): warning: In file included from...
+./rc_car.h(7): warning: In file included from...
+./motors.h(33): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+tests.c(1): warning: In file included from...
+./tests.h(4): warning: In file included from...
+./rc_car.h(22): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+tests.c(3): warning: function 'test_ADC' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
 {
 ^
-main.c(41): warning: function 'test_gpio' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+tests.c(19): warning: function 'test_gpio' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
 {
 ^
-main.c(63): warning: function 'test_uart' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+tests.c(41): warning: function 'test_uart' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
 {
 ^
 5 warnings generated.
-compiling main.c...
+compiling tests.c...
+rc_car.c(1): warning: In file included from...
+./rc_car.h(7): warning: In file included from...
+./motors.h(33): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+rc_car.c(1): warning: In file included from...
+./rc_car.h(8): warning: In file included from...
+./tests.h(4): warning: In file included from...
+./rc_car.h(22): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+rc_car.c(1): warning: In file included from...
+./rc_car.h(22): warning: no newline at end of file [-Wnewline-eof]
+#endif
+      ^
+rc_car.c(14): warning: use of GNU empty initializer extension [-Wgnu-empty-initializer]
+                char TempratureBuffer[]={};
+                                        ^
+rc_car.c(14): warning: zero size arrays are an extension [-Wzero-length-array]
+rc_car.c(16): warning: use of GNU empty initializer extension [-Wgnu-empty-initializer]
+        char SpeedBuffer[]={};
+                           ^
+rc_car.c(16): warning: zero size arrays are an extension [-Wzero-length-array]
+rc_car.c(18): warning: use of GNU empty initializer extension [-Wgnu-empty-initializer]
+        char TotalMessage []={};
+                             ^
+rc_car.c(18): warning: zero size arrays are an extension [-Wzero-length-array]
+rc_car.c(19): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+        sprintf(TempratureBuffer,"%f",temp);
+        ~~~~~~~                       ^~~~
+rc_car.c(20): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+        sprintf(SpeedBuffer,"%f",speed);
+        ~~~~~~~                  ^~~~~
+rc_car.c(19): warning: 'sprintf' will always overflow; destination buffer has size 0, but format string expands to at least 9 [-Wfortify-source]
+        sprintf(TempratureBuffer,"%f",temp);
+        ^
+rc_car.c(20): warning: 'sprintf' will always overflow; destination buffer has size 0, but format string expands to at least 9 [-Wfortify-source]
+        sprintf(SpeedBuffer,"%f",speed);
+        ^
+rc_car.c(30): warning: use of GNU empty initializer extension [-Wgnu-empty-initializer]
+                char TempratureBuffer[]={};
+                                        ^
+rc_car.c(30): warning: zero size arrays are an extension [-Wzero-length-array]
+rc_car.c(31): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+        sprintf(TempratureBuffer,"%f",GetMaxTemprature());
+        ~~~~~~~                       ^~~~~~~~~~~~~~~~~~
+rc_car.c(31): warning: 'sprintf' will always overflow; destination buffer has size 0, but format string expands to at least 9 [-Wfortify-source]
+        sprintf(TempratureBuffer,"%f",GetMaxTemprature());
+        ^
+rc_car.c(36): warning: function 'StartRCCar' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+18 warnings generated.
+compiling rc_car.c...
 linking...
 Program Size: Code=10184 RO-data=468 RW-data=16 ZI-data=1640  
 FromELF: creating hex file...
-".\Objects\c blue.axf" - 0 Error(s), 5 Warning(s).
+".\Objects\c blue.axf" - 0 Error(s), 27 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -165,7 +241,7 @@ Package Vendor: Keil
    * Component: Keil::Device:StdPeriph Drivers:USART:3.5.0
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_usart.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_usart.c
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

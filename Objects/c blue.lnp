@@ -5,6 +5,7 @@
 ".\objects\adc.o"
 ".\objects\motors.o"
 ".\objects\rc_car.o"
+".\objects\tests.o"
 ".\objects\basicmathfunctions.o"
 ".\objects\basicmathfunctionsf16.o"
 ".\objects\bayesfunctions.o"

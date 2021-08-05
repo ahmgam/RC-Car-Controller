@@ -1,4 +1,4 @@
-./objects/rc_car.o: rc_car.c rc_car.h uart.h \
+./objects/tests.o: tests.c tests.h rc_car.h uart.h \
   D:\Keil_v5\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h \
   D:\Keil_v5\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h \
   RTE\_Target_1\RTE_Components.h \
@@ -15,7 +15,6 @@
   D:\Keil_v5\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h \
   D:\Keil_v5\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h \
   D:\Keil_v5\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h \
-  adc.h pwm.h motors.h tests.h \
-  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  adc.h pwm.h motors.h D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   D:\Keil_v5\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h

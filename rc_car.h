@@ -5,6 +5,7 @@
 #include "adc.h"
 #include "pwm.h"
 #include "motors.h"
+#include "tests.h"
 #include "stdio.h"
 #include "system_stm32f10x.h"
 #include <stdio.h>

@@ -438,6 +438,16 @@
               <FileType>5</FileType>
               <FilePath>.\rc_car.h</FilePath>
             </File>
+            <File>
+              <FileName>tests.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\tests.c</FilePath>
+            </File>
+            <File>
+              <FileName>tests.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\tests.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
