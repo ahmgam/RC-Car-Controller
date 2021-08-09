@@ -6,13 +6,13 @@ int main()
 	while(1)
 	{
 		MoveForward();
-		delay(10000);
+		delay(1000000);
 		RotateClockwise();
-		delay(10000);
+		delay(1000000);
 		MoveBackward();
-		delay(10000);
+		delay(1000000);
 		RotateCounterClockwise();
-		delay(10000);
+		delay(1000000);
 	}
 	
 }

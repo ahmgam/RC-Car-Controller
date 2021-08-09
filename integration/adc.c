@@ -1,7 +1,6 @@
 #include "adc.h"
+#define CONVERT_TEMPRATURE(c) (c*500.0f/4096.0f)
 float MaxRecordedTemprature=0;
-float maxTemprature = 150.0;
-float maxReading = (0.01f*150.0f/3.3f)*8192.0f;
 void ADC_Init_()
 {
 	/* Enable GPIOA, GPIOB and GPIOC clock */
@@ -43,7 +42,7 @@ uint16_t ReadADC()
 float GetTemprature()
 {
 	uint16_t convResult = ReadADC();
-	float measuredTemprature =(convResult/maxReading)*maxTemprature;
+	float measuredTemprature =CONVERT_TEMPRATURE(convResult);
 	if (measuredTemprature>MaxRecordedTemprature)
 	{
 		MaxRecordedTemprature=measuredTemprature;

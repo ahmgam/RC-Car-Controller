@@ -13,7 +13,8 @@ void PWM(uint16_t Frequency,double DutyCycle)
   GPIO_TIM_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_Init(PWM_GPIO, &GPIO_TIM_InitStructure);
 	//GPIO_PinRemapConfig(GPIO_FullRemap_TIM1, ENABLE);
-	
+	//GPIO_PinRemapConfig(GPIO_PartialRemap_TIM1, ENABLE);
+
 	//Enable Timer counter and pre-load mode
 	#if TIM_CHANNEL_NUM==1
 	TIM_CCxCmd(TIM,TIM_Channel_1,TIM_CCx_Enable);

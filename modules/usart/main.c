@@ -5,6 +5,7 @@ int main()
 	UART_Init(9600);
 	while(1)
 	{		
+		//SendChar('0');
 		if (Is_Avilable()==1)
 		{
 		char recivedChar =(char)(ReciveChar()& 0xFF);

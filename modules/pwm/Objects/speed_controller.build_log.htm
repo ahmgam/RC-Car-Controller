@@ -21,21 +21,26 @@ Target DLL:      UL2CM3.DLL V1.163.9.0
 Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
-D:\Ahmed\Github\RC-Car-Controller\modules\usart\usart_controller.uvprojx
+D:\Ahmed\Github\RC-Car-Controller\modules\pwm\speed_controller.uvprojx
 Project File Date:  08/09/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'D:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
-main.c(45): warning: no newline at end of file [-Wnewline-eof]
-}
- ^
+pwm.c(1): warning: In file included from...
+./pwm.h(4): warning: In file included from...
+D:/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(32): warning: In file included from...
+D:/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(8302): warning: In file included from...
+./RTE/Device/STM32F103C6\stm32f10x_conf.h(87): warning: In file included from...
+D:/Keil_v5/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc\stm32f10x_tim.h(51): warning: padding size of 'TIM_TimeBaseInitTypeDef' with 1 byte to alignment boundary [-Wpadded]
+typedef struct
+        ^
 1 warning generated.
-compiling main.c...
+compiling pwm.c...
 linking...
-Program Size: Code=1320 RO-data=272 RW-data=0 ZI-data=1632  
+Program Size: Code=1668 RO-data=268 RW-data=4 ZI-data=1632  
 FromELF: creating hex file...
-".\Objects\usart_controller.axf" - 0 Error(s), 1 Warning(s).
+".\Objects\speed_controller.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -53,7 +58,7 @@ Package Vendor: Keil
    * Component: Framework Version: 3.5.1
    * Component: GPIO Version: 3.5.0
    * Component: RCC Version: 3.5.0
-   * Component: USART Version: 3.5.0
+   * Component: TIM Version: 3.5.0
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\Device\STM32F103C6
@@ -67,29 +72,29 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.5.0
 
    * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\startup_stm32f10x_ld.s
       Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
-      Source file:   Device\Source\ARM\startup_stm32f10x_ld.s
       Include file:  RTE_Driver\Config\RTE_Device.h
 
    * Component: Keil::Device:StdPeriph Drivers:Framework:3.5.1
-      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
-      Source file:   Device\StdPeriph_Driver\src\misc.c
-      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
       Include file:  Device\StdPeriph_Driver\inc\misc.h
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
 
    * Component: Keil::Device:StdPeriph Drivers:GPIO:3.5.0
-      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
 
    * Component: Keil::Device:StdPeriph Drivers:RCC:3.5.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
 
-   * Component: Keil::Device:StdPeriph Drivers:USART:3.5.0
-      Source file:   Device\StdPeriph_Driver\src\stm32f10x_usart.c
-      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_usart.h
+   * Component: Keil::Device:StdPeriph Drivers:TIM:3.5.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_tim.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
 Build Time Elapsed:  00:00:01
 </pre>
 </body>
